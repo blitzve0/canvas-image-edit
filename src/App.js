@@ -41,6 +41,7 @@ export default function CanvasStuff() {
         const y = canvasHeight / 2
         const centerOfImageX = x - imageWidthNormalized / 2
         const centerOfImageY = y - imageHeightNormalized / 2
+        /// Magical Part
         ctx.drawImage(img, centerOfImageX, centerOfImageY, imageWidthNormalized, imageHeightNormalized)
 
         //@ Tracking the Mouse and Drawing the Image on the Canvas aka drag and drop
@@ -59,6 +60,7 @@ export default function CanvasStuff() {
             let dx = mouseX
             let dy = mouseY
             ctx.clearRect(0, 0, canvas.width, canvas.height)
+            /// Magical Part
             ctx.drawImage(img, dx - imageWidthNormalized / 2, dy - imageHeightNormalized / 2, imageWidthNormalized, imageHeightNormalized)
           }
         })
