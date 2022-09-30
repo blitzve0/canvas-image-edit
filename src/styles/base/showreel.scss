@@ -1,0 +1,16 @@
+.showreel {
+  $root: &;
+
+  width: 100%;
+  height: 100vh;
+
+  @include absoluteZero;
+  position: fixed;
+  z-index: 135;
+  cursor: pointer;
+
+  video {
+    @include fullSize;
+    object-fit: contain;
+  }
+}

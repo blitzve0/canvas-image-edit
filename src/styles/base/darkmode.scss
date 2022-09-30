@@ -1,0 +1,42 @@
+//& Dark Mode
+.dark-mode {
+  .fix-dark-mode {
+    display: inline-flex;
+    filter: invert(1);
+  }
+  .fix-dark-mode-hue {
+    filter: invert(0) !important;
+  }
+
+  filter: invert(1);
+  img,
+  video,
+  iframe,
+  .about-section-8-lottie,
+  .balls,
+  .cursor-inner-text {
+    filter: invert(1);
+    color: #000 !important;
+  }
+  canvas {
+    filter: invert(1);
+  }
+  .eraser {
+    filter: invert(1) !important;
+    video {
+      filter: invert(0) !important;
+    }
+  }
+  .sequence {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+  .header-logo,
+  .cursor-media {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  .cursor {
+    color: #000 !important;
+  }
+
+  transition: filter 0.85s ease-in-out;
+}

@@ -1,0 +1,25 @@
+//& Top-Level View
+.layout {
+  $root: &;
+
+  height: 100vh;
+  background: $color-bg;
+  @include displayCenter;
+  flex-direction: column;
+
+  @include media('>=split') {
+    max-width: 3840px;
+  }
+
+  canvas {
+    width: 90vw;
+    height: 80vh;
+    z-index: 100;
+    border-radius: 20px;
+    background: #ececec;
+  }
+
+  input {
+    margin-bottom: 40px;
+  }
+}

@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# Canvas Image Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Version** - 1.0.0
 
-## Available Scripts
+**Author** - Abhay Rohit
 
-In the project directory, you can run:
+**License** - \_Copyright (c) 2022
 
-### `yarn start`
+# Table of contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Quick Setup](#quick-setup)
+   1. [Prerequisite](#qs1)
+   2. [Install Packages](#qs2)
+   3. [Development](#qs3)
+2. [Packages Used](#packs-used)
+   1. [Core Packages](#pu1)
+   2. [Frontend Packages](#pu2)
+   3. [VSCode Extensions](#pu3)
+3. [Advanced Configuration](#ad-conf)
+   1. [File Structure](#a-c1)
+   2. [Languages](#a-c2)
+   3. [Responsive Design](#a-c3)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 1. Quick Setup <a name="quick-setup"></a>
 
-### `yarn test`
+### (I) Prerequisite <a name="qs1"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install Node.js 12 or Above (https://nodejs.org/en/)
 
-### `yarn build`
+Install Yarn Package Manager (https://classic.yarnpkg.com/lang/en/docs/install/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### (II) Install Packages <a name="qs2"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### (III) Development <a name="qs3"></a>
 
-### `yarn eject`
+Deploy the app and start Webpack 5 Server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. Packages used <a name="packs-used"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### (I) Core dependencies <a name="pu1"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- ReactJS (https://reactjs.org/)
 
-## Learn More
+- ReactDOM (https://reactjs.org/docs/react-dom.html)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### (II) Front-end dependencies <a name="pu1"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Sass (https://sass-lang.com/)
 
-### Code Splitting
+### (III) VS Code Extensions <a name="pu3"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Better Comments (https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments/)
 
-### Analyzing the Bundle Size
+- Color Highlight (https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Import Cost (https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost/)
 
-### Making a Progressive Web App
+- Prettier Code Formatter (https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 3. Advanced configuration <a name="ad-conf"></a>
 
-### Advanced Configuration
+### (I) File structure <a name="a-c1"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+├── /node_modules/              # NodeJS Packages
+├── /src/                       # Source Code
+    ├── blocks                  # Full Page Reusable Components
+    ├── components              # Functional Display Components
+    ├── effects                 # SpecialFX and Animation Data
+    ├── math                    # Javascript and Math Calculations
+    ├── menu                    # Site Navigation Menu
+    ├── pageData                # Dynamic Site Generation JSON
+    ├── seo                     # NextJS Head and SEO Tags
+    ├── tools                   # Utilities and Tools
+    ├── /styles/                # SCSS styles
+└── /public/                    # Static Public Directory
+    ├── /icons/                 # SVG and other icons
+    ├── /locales/               # JSON localizations strings
+    ├── /static/                # Static files (fonts, images, videos, etc..)
+    ├── manifest.json           # NextPWA Config
+    ├── robots.txt              # Google Web Crawler Config
+├── .babelrc                    # Babel config
+├── .env                        # Environment variables
+├── .eslintrc.json              # ESLint Config
+├── .gitignore                  # Ignored Files for Github
+├── jsconfig.json               # Absolute Import Paths
+├── package.json                # Project meta and dependencies
+├── README.md                   # Instructions and Usage
+├── yarn.lock                   # Yarn Lockfile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
 
-### `yarn build` fails to minify
+### (II) Languages <a name="a-c2"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All locales should be stored in `./src/locales/{LANG}/*.json`.
+
+### (III) Responsive Design <a name="a-c3"></a>
+
+Style Library Used [Sass preprocessor](https://sass-lang.com/).
+
+By default entrypoint is [`./src/scss/main.scss`](styles/main.scss)
+
+#### Media Query
+
+Breakpoints :
+
+| Device    |   Size   | Description        |
+| :-------- | :------: | :----------------- |
+| `phone`   | `361px`  | Phone Size         |
+| `tablet`  | `767px`  | Tablet Size        |
+| `crt`     | `1023px` | CRT Square Monitor |
+| `laptop`  | `1280px` | Laptop Size        |
+| `desktop` | `1600px` | Desktop Size       |
+| `tv`      | `1920px` | 4K TV Size         |
+| `split`   | `3840px` | Multiple Monitors  |
+
+Usage in SASS File :
+
+```javascript
+@include media('<=phone') { content: "I'm Tiny Phone" } // Query for Devices Smaller Than a Phone
+@include media('>phone', '<=tablet') { content: "I'm Average Phone"} // Device Between Phone and Tablet Size
+@include media('>tablet', '<=crt') { content: "I'm Small Tablet"} // Between Tablet and CRT Monitor
+@include media('>crt', '<=laptop') {content: "I'm Big Tablet and also CRT" } // Between CRT and Laptop Size
+@include media('>laptop', '<=desktop') { content: "I'm Small Laptop"} // Between Laptop and Desktop Size
+@include media('>desktop', '<=tv') {content: "I'm Small Desktop" } // Between Desktop and TV Size
+@include media('>tv','<=split') { content: "I'm Large Desktop and Big TV" } // Greater Than TV but not as much as Split Monitor
+@include media('>split') { content: "I'm 4x4 Gaming Setup" } // All Devices Larger than 4K are Covered
+```
+
+### (IV) SoundFX <a name="a-c4"></a>
+
+Sound Library used is [HowlerJS](https://howlerjs.com/).
+
+All Sound Effects are stored in [`public/static/sounds/`](public/static/sounds/)
+
+### (V) JS <a name="a-c6"></a>
+
+All javascript is processed with [webpack](https://webpack.js.org/) + [Babel](https://babeljs.io/).
+
+Webpack config is stored in [`next.config.js`](next.config.js)
+
+Babel config is stored in [`.babelrc`](.babelrc)
+
+By default, entry point is [`pages/_app.js`](pages/_app.js)
+
+- [Read webpack docs](https://webpack.js.org/concepts/).
+
+- [Read Babel docs](https://babeljs.io/docs/en/).

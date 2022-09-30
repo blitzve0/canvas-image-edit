@@ -1,0 +1,51 @@
+/* Main Colors */
+$color-base: #fff;
+$color-graybase: #000;
+
+$color-primary: #0a57f4;
+$color-secondary: #00092b;
+
+$color-fill: #f4f6f8;
+$color-smooth: #b2b2b2;
+$color-muted: #ecf0f3;
+$color-disabled: #8c8c8c;
+$color-dark: #333;
+
+$color-error: #eb4242;
+$color-info: #01d7fd;
+$color-success: #51c67d;
+$color-warning: #ff9f4d;
+$color-danger: $color-error;
+
+$color-bg: $color-base;
+$color-text: #000;
+$color-border: #d3d3d3;
+$color-link: inherit;
+$color-link-hover: inherit;
+$color-modal: rgba(0, 0, 0, 0.75);
+
+/* Project Colors */
+$color-light-red: #ff6961;
+$color-light-green: #51c67d;
+$color-light-teal: #7fbbb1;
+$color-light-yellow: #ffc107;
+$color-light-orange: #ffb576;
+$color-light-blue: #a4d1ff;
+$color-light-gray: #b6c2d3;
+$color-light-pink: #f4adaf;
+$color-light-purple: #8784e8;
+
+$color-purple: #4945dc;
+$color-orange: #ff8c00;
+$color-blue: #1ca8e3;
+$color-red: #e93b3e;
+$color-teal: #008080;
+$color-gray: #445358;
+
+/* Fonts */
+$font-family: 'Averta', sans-serif;
+$font-family-secondary: sans-serif;
+$font-size: 14px;
+$font-weight: normal;
+$letter-spacing: normal;
+$line-height: normal;

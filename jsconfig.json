@@ -1,0 +1,20 @@
+{
+  "_comment": "Module to Declare Path to Folders",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/blocks/*": ["src/blocks/*"],
+      "@/menu/*": ["src/menu/*"],
+      "@/cursor/*": ["src/cursor/*"],
+      "@/effects/*": ["src/effects/*"],
+      "@/math/*": ["src/math/*"],
+      "@/tools/*": ["src/tools/*"],
+      "@/components/*": ["src/components/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/seo/*": ["src/seo/*"],
+      "@/asset/*": ["public/static/*"],
+      "@/pagedata/*": ["src/pagedata/*"]
+    }
+  },
+  "exclude": ["node_modules", "out", ".cache", "dist", ".next", ".vscode"]
+}

@@ -1,0 +1,377 @@
+//& SCSS Most Used Mixins
+
+//` Show Everything in Center with Flex
+@mixin displayCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//` Show Everything in Space Between with Flex
+@mixin displaySpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//` Width and Height both 100%
+@mixin fullSize {
+  width: 100%;
+  height: 100%;
+}
+
+//` Full Height Content
+@mixin fullHeight {
+  width: 100vw;
+  height: 100vh;
+}
+
+//` Absolute Position with All Point 0
+@mixin absoluteZero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+//` Relative Position with All Point 0
+@mixin relativeZero {
+  position: relative !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+//`Disable User Selection
+@mixin disableUserSelection {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//$ Cross-Browser Support Mixins
+//` Cross-Browser Support for Transform Property
+@mixin transformOrigin($left, $top) {
+  -moz-transform-origin: #{$left}px #{$top}px;
+  -ms-transform-origin: #{$left}px #{$top}px;
+  -o-transform-origin: #{$left}px #{$top}px;
+  -webkit-transform-origin: #{$left}px #{$top}px;
+  transform-origin: #{$left}px #{$top}px;
+}
+
+@mixin transformScale($amount) {
+  -webkit-transform: scale($amount);
+  -moz-transform: scale($amount);
+  -ms-transform: scale($amount);
+  -o-transform: scale($amount);
+  transform: scale($amount);
+}
+
+@mixin transformTranslate3D($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  -o-transform: translate3d($x, $y, $z);
+  -ms-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+@mixin transformRotateX($value) {
+  -webkit-transform: rotateY(#{$value}deg);
+  -moz-transform: rotateY(#{$value}deg);
+  -o-transform: rotateY(#{$value}deg);
+  -ms-transform: rotateY(#{$value}deg);
+  transform: rotateY(#{$value}deg);
+}
+
+@mixin transformRotateY($value) {
+  -webkit-transform: rotateX(#{$value}deg);
+  -moz-transform: rotateX(#{$value}deg);
+  -o-transform: rotateX(#{$value}deg);
+  -ms-transform: rotateX(#{$value}deg);
+  transform: rotateX(#{$value}deg);
+}
+
+@mixin transformPerspective($value) {
+  perspective: #{$value}px;
+  -ms-perspective: #{$value}px;
+  -moz-perspective: #{$value}px;
+  -webkit-perspective: #{$value}px;
+}
+
+@mixin transformSkewY($value) {
+  -webkit-transform: skewY(#{$value}deg);
+  -moz-transform: skewY(#{$value}deg);
+  -o-transform: skewY(#{$value}deg);
+  -ms-transform: skewY(#{$value}deg);
+  transform: skewY(#{$value}deg);
+}
+
+//$ Sub Heading Style
+.hero-subheading-serial {
+  font-weight: 700;
+  -webkit-text-stroke-color: $color-graybase;
+  -webkit-text-fill-color: transparent;
+
+  @include media('<=tablet') {
+    font-size: 8.5vw;
+    -webkit-text-stroke-width: 0.2vw;
+  }
+  @include media('>tablet', '<laptop') {
+    -webkit-text-stroke-width: 0.2vw;
+    font-size: 5vw;
+  }
+  @include media('>=laptop', '<split') {
+    font-size: 3.15vw;
+    letter-spacing: -0.05vw !important;
+    line-height: 125%;
+    -webkit-text-stroke-width: 0.055vw;
+  }
+  @include media('>=split') {
+    font-size: 122px;
+    letter-spacing: -1.15px !important;
+    line-height: 125%;
+    -webkit-text-stroke-width: 2px;
+  }
+}
+.hero-subheading-1 {
+  @extend .hero-subheading-serial;
+
+  @include media('<=tablet') {
+    font-size: 16vw;
+  }
+  @include media('>tablet', '<laptop') {
+    font-size: 12vw;
+  }
+  @include media('>=laptop', '<split') {
+    font-size: 6.15vw;
+    letter-spacing: -0.25vw !important;
+  }
+  @include media('>=split') {
+    font-size: 236px;
+    letter-spacing: -8px !important;
+  }
+}
+.hero-subheading-2 {
+  @extend .hero-subheading-serial;
+
+  -webkit-text-stroke-color: $color-graybase;
+  -webkit-text-fill-color: $color-graybase;
+
+  @include media('<=tablet') {
+    font-size: 16vw;
+    -webkit-text-stroke-width: 0.2vw;
+    line-height: 90%;
+  }
+  @include media('>tablet', '<laptop') {
+    -webkit-text-stroke-width: 0.2vw;
+    font-size: 12vw;
+    line-height: 90%;
+  }
+  @include media('>=laptop', '<split') {
+    font-size: 6.15vw;
+    letter-spacing: -0.35vw !important;
+    -webkit-text-stroke-width: 0vw;
+  }
+  @include media('>=split') {
+    font-size: 236px;
+    letter-spacing: -12px !important;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+
+//$ Sub Heading - Small
+.hero-subheading-serial-small {
+  font-size: 6vw;
+  font-weight: 700;
+  letter-spacing: -0.3vw;
+  -webkit-text-stroke-width: 0.2vw;
+  -webkit-text-stroke-color: $color-graybase;
+  -webkit-text-fill-color: transparent;
+}
+.hero-subheading-1-small {
+  @extend .hero-subheading-serial;
+  font-size: 10vw;
+}
+.hero-subheading-2-small {
+  @extend .hero-subheading-serial-small;
+  font-size: 10vw;
+  -webkit-text-stroke-width: 0.2vw;
+  -webkit-text-stroke-color: $color-graybase;
+  -webkit-text-fill-color: $color-graybase;
+  line-height: 90%;
+}
+.half-opacity {
+  opacity: 0.6;
+}
+.font-regular {
+  font-weight: 400;
+}
+.top-padding {
+  @include media('>tablet', '<laptop') {
+    margin-top: 18.5vw;
+  }
+  @include media('>=laptop', '<split') {
+    margin-top: 18.5vw;
+  }
+  @include media('>=split') {
+    margin-top: 710px;
+  }
+}
+.normal {
+  font-size: 1.5vw;
+  letter-spacing: -0.03vw;
+  @include media('<=tablet') {
+    font-size: 3.5vw;
+  }
+  @include media('>tablet', '<laptop') {
+    font-size: 2.5vw;
+  }
+  @include media('>=split') {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+}
+.small {
+  font-size: 1.15vw;
+  letter-spacing: -0.005vw;
+  @include media('>=split') {
+    font-size: 44px;
+    letter-spacing: -0.2px;
+  }
+}
+.bold {
+  font-weight: 600;
+}
+.stroke {
+  -webkit-text-stroke-width: 0.055vw !important;
+  @include media('<=tablet') {
+    -webkit-text-stroke-width: 0.2vw !important;
+  }
+  @include media('>tablet', '<laptop') {
+    -webkit-text-stroke-width: 0.125vw !important;
+  }
+  @include media('>=split') {
+    -webkit-text-stroke-width: 2.1px !important;
+  }
+  -webkit-text-stroke-color: $color-graybase !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.no-stroke {
+  color: $color-graybase !important;
+  -webkit-text-stroke-width: 0px !important;
+  -webkit-text-stroke-color: transparent !important;
+  -webkit-text-fill-color: $color-graybase !important;
+  @include media('<=tablet') {
+    -webkit-text-stroke-width: 0.2vw !important;
+    -webkit-text-stroke-color: $color-graybase !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  @include media('>tablet', '<laptop') {
+    -webkit-text-stroke-width: 0.125vw !important;
+    -webkit-text-stroke-color: $color-graybase !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+.margin-top-xxs {
+  margin-top: 0.65vw;
+}
+.margin-top-xs {
+  margin-top: 1.5vw;
+}
+.margin-top-small {
+  margin-top: 3vw;
+  @include media('<laptop') {
+    margin-top: 8.5vw;
+  }
+  @include media('>=split') {
+    margin-top: 114px;
+  }
+}
+.margin-bottom-small {
+  margin-top: 3vw;
+  @include media('<laptop') {
+    margin-top: 8.5vw;
+  }
+  @include media('>=split') {
+    margin-top: 114px;
+  }
+}
+.margin-top-regular {
+  margin-top: 10.5vw;
+  @include media('>=split') {
+    margin-top: 404px;
+  }
+}
+.margin-top-medium {
+  margin-top: 9vw;
+  @include media('>=split') {
+    margin-top: 344px;
+  }
+}
+.margin-top-large {
+  margin-top: 13.5vw;
+  @include media('>=split') {
+    margin-top: 584px;
+  }
+}
+.no-mouse {
+  pointer-events: none;
+}
+.spacer-xl {
+  width: 100%;
+  background: $color-bg;
+  @include media('>=laptop', '<split') {
+    height: 20vw;
+  }
+  @include media('>=split') {
+    height: 768px;
+  }
+}
+.spacer-large {
+  width: 100%;
+  background: $color-bg;
+  @include media('>=laptop', '<split') {
+    height: 13.5vw;
+  }
+  @include media('>=split') {
+    height: 518px;
+  }
+}
+.spacer-medium {
+  width: 100%;
+  background: $color-bg;
+  @include media('>=laptop', '<split') {
+    height: 7.5vw;
+  }
+  @include media('>=split') {
+    height: 288px;
+  }
+}
+.desktop {
+  @include media('<laptop') {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+.mobile {
+  @include media('>=laptop') {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+.use-h1 {
+  font-size: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  display: inline-block !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
